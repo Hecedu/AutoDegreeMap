@@ -1,0 +1,48 @@
+﻿@page
+@model Auto_Degree_Map.Pages.AutoMap.CreateCourseInstanceModel
+
+@{
+    ViewData["Title"] = "CreateCourseInstance";
+}
+
+<h1>CreateCourseInstance</h1>
+
+<h4>CourseInstance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CourseInstance.CourseInstanceID" class="control-label"></label>
+                <input asp-for="CourseInstance.CourseInstanceID" class="form-control" />
+                <span asp-validation-for="CourseInstance.CourseInstanceID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseInstance.CourseID" class="control-label"></label>
+                <select asp-for="CourseInstance.CourseID" class ="form-control" asp-items="ViewBag.CourseID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseInstance.Semester" class="control-label"></label>
+                <input asp-for="CourseInstance.Semester" class="form-control" />
+                <span asp-validation-for="CourseInstance.Semester" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CourseInstance.Teacher" class="control-label"></label>
+                <input asp-for="CourseInstance.Teacher" class="form-control" />
+                <span asp-validation-for="CourseInstance.Teacher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

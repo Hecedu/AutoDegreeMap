@@ -7,6 +7,7 @@ namespace Auto_Degree_Map.Models
 {
     public class Degree
     {
+        public int DegreeId { get; set; }
         public string Name { get; set; }
         public int RequiredCredits { get; set; }
         public List<Course> RequiredCourses { get; set; }

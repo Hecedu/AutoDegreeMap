@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\AutoMap\" />
     <Folder Include="Pages\SemesterPlan.cs\" />
   </ItemGroup>
 

@@ -1,0 +1,48 @@
+﻿@page
+@model Auto_Degree_Map.Pages.AutoMap.ViewCourseInstancesModel
+
+@{
+    ViewData["Title"] = "ViewCourseInstances";
+}
+
+<h1>ViewCourseInstances</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseInstance[0].Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseInstance[0].Semester)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseInstance[0].Teacher)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.CourseInstance) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.CourseID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Semester)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teacher)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CourseInstanceID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CourseInstanceID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CourseInstanceID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

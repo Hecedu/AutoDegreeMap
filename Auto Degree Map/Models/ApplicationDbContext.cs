@@ -19,8 +19,8 @@ namespace Auto_Degree_Map.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Course>().HasMany(city => city.Connections)
-                           .WithRequired().HasForeignKey(con => con.EndCityId);
+           // modelBuilder.Entity<Course>().HasMany(city => city.Connections)
+            //               .WithRequired().HasForeignKey(con => con.EndCityId);
         }
 
     }
