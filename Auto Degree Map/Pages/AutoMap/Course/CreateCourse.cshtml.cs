@@ -35,10 +35,10 @@ namespace Auto_Degree_Map.Pages.AutoMap
                 return Page();
             }
 
-            _context.Course.Add(Course);
+            _context.Courses.Add(Course);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./ViewCourses");
         }
     }
 }

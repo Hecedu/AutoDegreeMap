@@ -35,7 +35,7 @@ namespace Auto_Degree_Map.Pages.AutoMap
                 return Page();
             }
 
-            _context.SemesterPlan.Add(SemesterPlan);
+            _context.SemesterPlans.Add(SemesterPlan);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

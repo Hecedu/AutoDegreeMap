@@ -21,7 +21,7 @@ namespace Auto_Degree_Map.Pages.AutoMap
 
         public async Task OnGetAsync()
         {
-            Course = await _context.Course.ToListAsync();
+            Course = await _context.Courses.ToListAsync();
         }
     }
 }

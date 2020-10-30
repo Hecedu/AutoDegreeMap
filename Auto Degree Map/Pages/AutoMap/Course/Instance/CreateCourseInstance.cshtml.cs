@@ -20,7 +20,7 @@ namespace Auto_Degree_Map.Pages.AutoMap
 
         public IActionResult OnGet()
         {
-        ViewData["CourseID"] = new SelectList(_context.Course, "CourseID", "CourseID");
+        ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "CourseID");
             return Page();
         }
 

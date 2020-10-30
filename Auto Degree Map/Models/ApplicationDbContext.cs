@@ -11,17 +11,11 @@ namespace Auto_Degree_Map.Models
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : base(dbContextOptions)
         {
         }
-        public DbSet<Course> Course { get; set; }
+        public DbSet<Course> Courses { get; set; }
         public DbSet<CourseInstance> CourseInstances { get; set; }
-        public DbSet<SemesterPlan> SemesterPlan { get; set; }
+        public DbSet<SemesterPlan> SemesterPlans { get; set; }
         public DbSet<Degree> Degrees { get; set; }
-        public DbSet <SemesterPlan> SemesterPlans { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-           // modelBuilder.Entity<Course>().HasMany(city => city.Connections)
-            //               .WithRequired().HasForeignKey(con => con.EndCityId);
-        }
-
+      
     }
 }
